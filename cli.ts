@@ -26,7 +26,7 @@ const server = await download(
   "https://cdn.deno.land/ultra/versions/v0.6/raw/examples/boilerplate/server.js"
 );
 const app = await download(
-  "https://cdn.deno.land/ultra/versions/v0.6/raw/examples/boilerplate/src/app.jsx"
+  "https://cdn.deno.land/ultra_init/versions/0.0.1/raw/template/app.jsx"
 );
 
 Deno.mkdirSync(appName)
