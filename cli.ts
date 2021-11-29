@@ -48,6 +48,7 @@ Deno.mkdirSync(`${appName}/src/components`);
 const renderdApp = render(app, {
   appName,
 });
+Deno.writeTextFileSync(`${appName}/src/app.jsx`, renderdApp);
 Deno.writeTextFileSync(`${appName}/src/components/demo.jsx`, demo);
 Deno.writeTextFileSync(`${appName}/src/components/links.jsx`, links);
 Deno.writeTextFileSync(`${appName}/src/components/repositry.jsx`, repositry);
