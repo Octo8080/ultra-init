@@ -1,6 +1,6 @@
 import { render } from "https://deno.land/x/mustache/mod.ts";
 
-let appName = '';
+let appName = "";
 while (true) {
   const tmp = prompt("App name?");
   if (!tmp) continue;
@@ -26,15 +26,28 @@ const server = await download(
   "https://cdn.deno.land/ultra/versions/v0.6/raw/examples/boilerplate/server.js"
 );
 const app = await download(
-  "https://cdn.deno.land/ultra_init/versions/0.0.1/raw/template/app.jsx"
+  "https://cdn.deno.land/ultra_init/versions/0.0.3/raw/template/app.jsx"
 );
 
-Deno.mkdirSync(appName)
+const demo = await download(
+  "https://cdn.deno.land/ultra_init/versions/0.0.3/raw/template/components/demo.jsx"
+);
+const links = await download(
+  "https://cdn.deno.land/ultra_init/versions/0.0.3/raw/template/components/links.jsx"
+);
+const repositry = await download(
+  "https://cdn.deno.land/ultra_init/versions/0.0.3/raw/template/components/repositry.jsx"
+);
+
+Deno.mkdirSync(appName);
 Deno.writeTextFileSync(`${appName}/makefile`, makefile);
 Deno.writeTextFileSync(`${appName}/importmap.json`, importmap);
 Deno.writeTextFileSync(`${appName}/server.js`, server);
-Deno.mkdirSync(`${appName}/src`)
+Deno.mkdirSync(`${appName}/src`);
+Deno.mkdirSync(`${appName}/src/components`);
 const renderdApp = render(app, {
-    appName
-  });
-Deno.writeTextFileSync(`${appName}/src/app.jsx`, renderdApp);
+  appName,
+});
+Deno.writeTextFileSync(`${appName}/src/components/demo.jsx`, demo);
+Deno.writeTextFileSync(`${appName}/src/components/links.jsx`, links);
+Deno.writeTextFileSync(`${appName}/src/components/repositry.jsx`, repositry);
