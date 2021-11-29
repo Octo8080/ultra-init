@@ -26,17 +26,17 @@ const server = await download(
   "https://cdn.deno.land/ultra/versions/v0.6/raw/examples/boilerplate/server.js"
 );
 const app = await download(
-  "https://cdn.deno.land/ultra_init/versions/0.0.3/raw/template/app.jsx"
+  "https://cdn.deno.land/ultra_init/versions/0.0.6/raw/template/app.jsx"
 );
 
 const demo = await download(
-  "https://cdn.deno.land/ultra_init/versions/0.0.3/raw/template/components/demo.jsx"
+  "https://cdn.deno.land/ultra_init/versions/0.0.6/raw/template/components/demo.jsx"
 );
 const links = await download(
-  "https://cdn.deno.land/ultra_init/versions/0.0.3/raw/template/components/links.jsx"
+  "https://cdn.deno.land/ultra_init/versions/0.0.6/raw/template/components/links.jsx"
 );
 const repositry = await download(
-  "https://cdn.deno.land/ultra_init/versions/0.0.3/raw/template/components/repositry.jsx"
+  "https://cdn.deno.land/ultra_init/versions/0.0.6/raw/template/components/repositry.jsx"
 );
 
 Deno.mkdirSync(appName);
