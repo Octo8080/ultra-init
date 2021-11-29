@@ -5,9 +5,9 @@ import { SWRConfig } from "swr";
 import ultraCache from "ultra/cache";
 import { Route } from "wouter";
 
-import Repositry from "./components/repositry.jsx";
-import Links from "./components/links.jsx";
-import Demo from "./components/demo.jsx";
+const Repositry = lazy(() => import("./components/repositry.jsx"));
+const Links = lazy(() => import("./components/links.jsx"));
+const Demo = lazy(() => import("./components/demo.jsx"));
 
 const Ultra = ({ cache }) => {
   return (

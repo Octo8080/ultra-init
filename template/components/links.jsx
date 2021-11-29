@@ -9,7 +9,7 @@ const Links = function () {
           <span class="text-2xl md:hover:underline"><Link href="/">Repositry</Link></span>
           </div>
           <div class="flex-2 m-1">
-            <span class="text-2xl md:hover:underline"><Link href="/demo">demo</Link></span>
+            <span class="text-2xl md:hover:underline"><Link href="/demo">Demo</Link></span>
           </div>
         </div>
       </div>
