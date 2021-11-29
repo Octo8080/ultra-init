@@ -45,9 +45,7 @@ Deno.writeTextFileSync(`${appName}/importmap.json`, importmap);
 Deno.writeTextFileSync(`${appName}/server.js`, server);
 Deno.mkdirSync(`${appName}/src`);
 Deno.mkdirSync(`${appName}/src/components`);
-const renderdApp = render(app, {
-  appName,
-});
+const renderdApp = app.replace("{{appName}}", appName);
 Deno.writeTextFileSync(`${appName}/src/app.jsx`, renderdApp);
 Deno.writeTextFileSync(`${appName}/src/components/demo.jsx`, demo);
 Deno.writeTextFileSync(`${appName}/src/components/links.jsx`, links);
